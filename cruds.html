@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="crudscss.css">
+</head>
+<body>
+    <div class="crud">
+<div class="head">
+    <h2>curd</h2>
+    <p>product management system</p>
+</div>
+
+<div class="inputs">
+    <input  placeholder="title" id="title" type="text">
+    <div class="price">
+        <input   onkeyup="getTotal()" placeholder="price" id="price" type="number">
+        <input  onkeyup="getTotal()"  placeholder="taxes" id="taxes" type="number">
+        <input   onkeyup="getTotal()" placeholder="ads" id="ads" type="number">
+        <input onkeyup="getTotal()"  placeholder="discount" id="discount" type="number">
+        <small id="total">00</small>
+    </div>
+    <input  placeholder="count" id="count" type="number">
+    <input placeholder="category" id="category" type="text">
+    <button type="submit" id="submit">create</button>
+</div>
+
+
+<div class="outputs">
+    <div class="searchBlock">
+        <input  onkeyup="serachData(this.value)" type="text" id="search" placeholder="search">
+        <div class="btnSearch">
+            <button  onclick="getSerashMood(this.id)" id="searchTitle"> search by title</button>
+            <button   onclick="getSerashMood(this.id)" id="searchCategory">search by category</button>
+        </div>
+    </div>
+    <div id="deleteAll">
+
+    </div>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>taxes</th>
+            <th>ads</th>
+            <th>discount</th>
+            <th>total</th>
+            <th>category</th>
+            <th>updata</th>
+            <th>delete</th>
+        </tr>
+
+        <tbody id="tbody">
+    
+            
+            
+        </tbody>
+    </table>
+</div>
+    </div>
+    <script src="crudsjava.js"> </script>
+</body>
+</html>
